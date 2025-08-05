@@ -1,0 +1,215 @@
+[
+  {
+    "id": "1",
+    "name": "Paneer Butter Masala",
+    "image": "https://www.mygingergarlickitchen.com/wp-content/uploads/2024/04/restaurant-style-paneer-butter-masala-recipe-6.jpg",
+    "ingredients": [
+      "200g paneer", "2 tbsp butter", "1 onion", "2 tomatoes", "1/2 cup cream", "1 tsp garam masala"
+    ],
+    "instructions": [
+      "Heat butter in a pan.", "Sauté onions till golden.", "Add tomato puree and cook.",
+      "Mix in cream and spices.", "Add paneer and simmer.", "Serve with naan or rice."
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Veg Biryani",
+    "image": "https://www.whiskaffair.com/wp-content/uploads/2020/08/Veg-Biryani-2-3.jpg",
+    "ingredients": [
+      "1 cup basmati rice", "1/2 cup mixed vegetables", "2 tbsp oil", "1 onion", "Spices", "Mint leaves"
+    ],
+    "instructions": [
+      "Cook rice 70%.", "Sauté vegetables and spices.", "Layer rice and veg in pot.",
+      "Cover and simmer.", "Garnish and serve hot."
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Chole Masala",
+    "image": "https://vegecravings.com/wp-content/uploads/2017/01/chole-recipe-step-by-step-instructions-13.jpg",
+    "ingredients": [
+      "1 cup chickpeas", "2 onions", "2 tomatoes", "1 tsp ginger-garlic paste", "2 tsp chole masala", "Coriander"
+    ],
+    "instructions": [
+      "Soak and boil chickpeas.", "Sauté onions, add tomatoes.", "Mix spices and chickpeas.",
+      "Simmer 20 mins.", "Garnish and serve."
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Masala Dosa",
+    "image": "https://cookilicious.com/wp-content/uploads/2021/12/Sweet-Potato-Masala-Dosa-3.jpg",
+    "ingredients": [
+      "Dosa batter", "2 boiled potatoes", "1 onion", "Mustard seeds", "Curry leaves", "Oil"
+    ],
+    "instructions": [
+      "Prepare potato masala.", "Spread dosa batter on pan.", "Add masala, fold dosa.", "Serve with chutney."
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Rajma Chawal",
+    "image": "https://eatatdgpg.com/wp-content/uploads/2025/05/34_Rajma_Chawal-1.png",
+    "ingredients": [
+      "1 cup rajma", "2 tomatoes", "1 onion", "Spices", "Cooked rice"
+    ],
+    "instructions": [
+      "Soak and boil rajma.", "Cook gravy with onion-tomato.", "Add rajma and simmer.", "Serve with rice."
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Aloo Paratha",
+    "image": "https://i0.wp.com/smithakalluraya.com/wp-content/uploads/2015/02/image.1024x1024-95.jpg?resize=720%2C972&ssl=1",
+    "ingredients": [
+      "2 boiled potatoes", "Wheat flour dough", "Cumin, chili, salt", "Butter"
+    ],
+    "instructions": [
+      "Prepare aloo filling.", "Stuff and roll dough.", "Cook on tawa with butter.", "Serve with curd."
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Palak Paneer",
+    "image": "https://www.indianveggiedelight.com/wp-content/uploads/2017/10/palak-paneer-recipe-featured.jpg",
+    "ingredients": [
+      "250g spinach", "200g paneer", "1 onion", "2 tomatoes", "Spices"
+    ],
+    "instructions": [
+      "Boil and puree spinach.", "Sauté onion, tomato, spices.", "Add spinach and paneer.", "Simmer and serve."
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Idli Sambar",
+    "image": "https://i0.wp.com/binjalsvegkitchen.com/wp-content/uploads/2015/11/Tiffin-Sambar-H1.jpg?fit=600%2C900&ssl=1",
+    "ingredients": [
+      "Idli batter", "1 cup toor dal", "Tamarind", "Vegetables", "Sambar masala"
+    ],
+    "instructions": [
+      "Steam idlis.", "Cook dal with vegetables.", "Add tamarind and masala.", "Serve with idli."
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Matar Paneer",
+    "image": "https://static.toiimg.com/photo/53251884.cms",
+    "ingredients": [
+      "200g paneer", "1 cup green peas", "1 onion", "2 tomatoes", "Cream & spices"
+    ],
+    "instructions": [
+      "Sauté onion, tomato, spices.", "Add peas and paneer.", "Add water and simmer.", "Serve with chapati."
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Poha",
+    "image": "https://www.mrishtanna.com/wp-content/uploads/2018/04/poha-indian-breakfast-recipe.jpg",
+    "ingredients": [
+      "1 cup poha", "1 onion", "Mustard seeds", "Green chili", "Coriander, lemon"
+    ],
+    "instructions": [
+      "Wash poha and drain.", "Sauté mustard, onion, chili.", "Add poha and cook 5 mins.", "Garnish and serve."
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Aloo Tikki",
+    "image": "https://www.indianveggiedelight.com/wp-content/uploads/2023/07/aloo-tikki-featured.jpg",
+    "ingredients": ["3 boiled potatoes", "spices", "bread crumbs", "oil"],
+    "instructions": ["Mash potatoes", "Add spices", "Shape tikkis", "Shallow fry"]
+  },
+  {
+    "id": "12",
+    "name": "Gulab Jamun",
+    "image": "https://i0.wp.com/www.chitrasfoodbook.com/wp-content/uploads/2016/10/gulab-jamun-using-mix.jpg?w=1200&ssl=1",
+    "ingredients": ["1 cup milk powder", "ghee", "sugar", "cardamom"],
+    "instructions": ["Make dough", "Shape balls", "Deep fry", "Soak in sugar syrup"]
+  },
+  {
+    "id": "13",
+    "name": "Rava Idli",
+    "image": "https://www.funfoodfrolic.com/wp-content/uploads/2020/07/Rava-Idli-Thumbnail.jpg",
+    "ingredients": ["1 cup semolina", "1/2 cup curd", "mustard seeds", "baking soda"],
+    "instructions": ["Mix ingredients", "Pour in moulds", "Steam for 10 minutes"]
+  },
+  {
+    "id": "14",
+    "name": "Masala Chai",
+    "image": "https://cdn.shopify.com/s/files/1/0758/6929/0779/files/Masala_Tea_-_Annams_Recipes_Shop_2_480x480.jpg?v=1732347934",
+    "ingredients": ["2 cups water", "1 cup milk", "tea leaves", "spices"],
+    "instructions": ["Boil water with spices", "Add tea leaves", "Add milk", "Strain and serve"]
+  },
+  {
+    "id": "15",
+    "name": "Kadai Paneer",
+    "image": "https://www.cubesnjuliennes.com/wp-content/uploads/2020/03/Best-Kadai-Paneer-Recipe.jpg",
+    "ingredients": ["200g paneer", "bell peppers", "onions", "spices"],
+    "instructions": ["Sauté vegetables", "Add paneer", "Cook with spices", "Serve hot"]
+  },
+
+{
+  "id": "16",
+  "name": "Malai Kofta",
+  "image": "https://www.cookwithmanali.com/wp-content/uploads/2020/03/Malai-Kofta-Recipe-500x500.jpg",
+  "ingredients": ["200g paneer", "2 boiled potatoes", "cashews", "cream", "tomatoes", "spices"],
+  "instructions": ["Make kofta balls from paneer and potatoes", "Prepare creamy tomato gravy", "Fry koftas", "Add to gravy and serve"]
+},
+{
+  "id": "17",
+  "name": "Bhindi Masala",
+  "image": "https://www.whiskaffair.com/wp-content/uploads/2020/11/Bhindi-Masala-2-3.jpg",
+  "ingredients": ["200g okra (bhindi)", "2 onions", "2 tomatoes", "spices", "oil"],
+  "instructions": ["Wash and cut bhindi", "Sauté onions and tomatoes", "Add spices and bhindi", "Cook until soft"]
+},
+{
+  "id": "18",
+  "name": "Dhokla",
+  "image": "https://maayeka.com/wp-content/uploads/2011/11/sooji-ka-dhokla-instant-recipe-1-of-1.jpg",
+  "ingredients": ["1 cup besan", "1 tbsp eno", "1/2 cup curd", "salt", "mustard seeds", "curry leaves"],
+  "instructions": ["Make batter with besan and curd", "Add eno and steam", "Temper with mustard and curry leaves", "Cut and serve"]
+},
+{
+  "id": "19",
+  "name": "Methi Thepla",
+  "image": "https://www.maggi.in/sites/default/files/srh_recipes/1e928e572fa09f3f9fc56ce26a954e32.jpg",
+  "ingredients": ["1 cup wheat flour", "fenugreek leaves", "yogurt", "spices", "oil"],
+  "instructions": ["Make dough using all ingredients", "Roll into thin rotis", "Cook on tawa with oil", "Serve hot"]
+},
+{
+  "id": "20",
+  "name": "Pav Bhaji",
+  "image": "https://assets.bonappetit.com/photos/63cb14735125107865c0fe8f/1:1/w_2560%2Cc_limit/012023-pav-bhaji-lede.jpg",
+  "ingredients": ["2 potatoes", "1 cup mixed vegetables", "butter", "onion", "tomato", "bhaji masala"],
+  "instructions": ["Boil and mash vegetables", "Cook with onion, tomato, and masala", "Serve with buttered pav"]
+},
+{
+  "id": "21",
+  "name": "Baingan Bharta",
+  "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/06/baingan-bharta.jpg",
+  "ingredients": ["1 large brinjal", "1 onion", "2 tomatoes", "garlic", "spices"],
+  "instructions": ["Roast and mash brinjal", "Sauté onion, tomato, and garlic", "Mix brinjal and cook", "Serve hot"]
+},
+{
+  "id": "22",
+  "name": "Sooji Halwa",
+  "image": "https://www.funfoodfrolic.com/wp-content/uploads/2020/10/Suji-Halwa-Thumbnail.jpg",
+  "ingredients": ["1 cup semolina (sooji)", "1/2 cup ghee", "1 cup sugar", "cardamom", "dry fruits"],
+  "instructions": ["Roast sooji in ghee", "Add water and sugar", "Stir continuously", "Add dry fruits and serve"]
+},
+{
+  "id": "23",
+  "name": "Tamarind Rice",
+  "image": "https://maayeka.com/wp-content/uploads/2013/09/Puliyohara-tamarind-rice-1-500x500.jpg",
+  "ingredients": ["2 cups cooked rice", "tamarind pulp", "mustard seeds", "chana dal", "curry leaves", "spices"],
+  "instructions": ["Make tamarind paste with spices", "Mix with rice", "Garnish with fried curry leaves and peanuts"]
+},
+{
+  "id": "24",
+  "name": "Veg Pulao",
+  "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFPjIluL4H7E7Qznz6kq0DziLeDpnSg0RqM_0J-3nemYyxHbWSK0EaaAZ70NBiy1kLAFy5ZCxgBfCpETdfnL2oSqhS88KOdNTexX9Me5y1xKbFCU0D0DocySLaCPdiP1eXT7dvEWHXstDA/s1600/vegetable+pulao.JPG",
+  "ingredients": ["1 cup basmati rice", "mixed vegetables", "ghee", "whole spices", "onion"],
+  "instructions": ["Sauté spices and onion", "Add vegetables and rice", "Add water and cook", "Serve hot with raita"]
+}
+
+]

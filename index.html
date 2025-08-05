@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">🍽️The Recipe Box</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>Discover Delicious Recipes</h1>
+      <p>Search and explore your favorite meals from around the world!</p>
+      <input type="text" id="searchInput" placeholder="Search recipes...">
+    </header>
+
+    <!-- Recipe Grid -->
+  <main id="recipeGrid"></main>
+
+<div class="show-more-container">
+  <button id="showMoreBtn" style="display: none;">Show More</button>
+</div>
+
+
+
+    <!-- Modal for Full Recipe -->
+    <div id="recipeModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" alt="Recipe Image">
+        <h3>Ingredients</h3>
+        <ul id="modalIngredients"></ul>
+        <h3>Instructions</h3>
+        <ol id="modalInstructions"></ol>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="info-section">
+      <h2>About The Recipe Box</h2>
+      <p>The Recipe Box is your go-to website for discovering and sharing amazing recipes. From traditional dishes to modern delights, our goal is to help you cook better, eat well, and explore culinary creativity.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="info-section">
+      <h2>Contact Us</h2>
+      <p>Have a suggestion or want to share a recipe? Reach out at <a href="mailto:hello@therecipebox.com">hello@therecipebox.com</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 The Recipe Box. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
