@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Recipe Box</title>
   <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,7 +29,14 @@
     <header class="hero">
       <h1>Discover Delicious Recipes</h1>
       <p>Search and explore your favorite meals from around the world!</p>
-      <input type="text" id="searchInput" placeholder="Search recipes...">
+   <div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search recipes...">
+  <i class="fas fa-times clear-icon" id="clearIcon"></i>
+  <i class="fas fa-search search-icon" id="searchIcon"></i>
+</div>
+
+
+
     </header>
 
     <!-- Recipe Grid -->
@@ -36,18 +48,22 @@
 
 
 
-    <!-- Modal for Full Recipe -->
-    <div id="recipeModal" class="modal">
-      <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h2 id="modalTitle"></h2>
-        <img id="modalImage" alt="Recipe Image">
-        <h3>Ingredients</h3>
-        <ul id="modalIngredients"></ul>
-        <h3>Instructions</h3>
-        <ol id="modalInstructions"></ol>
-      </div>
-    </div>
+   <!-- Modal for Full Recipe -->
+<div id="recipeModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <img id="modalImage" alt="Recipe Image">
+    <h3>Ingredients</h3>
+    <ul id="modalIngredients"></ul>
+    <h3>Instructions</h3>
+    <ol id="modalInstructions"></ol>
+
+    <!-- ✅ New Button Added -->
+    <button id="downloadBtn">📥 Download Recipe</button>
+  </div>
+</div>
+
 
     <!-- About Section -->
     <section id="about" class="info-section">
@@ -68,5 +84,8 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
 </body>
 </html>
