@@ -1,11 +1,7 @@
 let recipes = [];
 let visibleCount = 8;
-
 const recipeGrid = document.getElementById("recipeGrid");
 const searchInput = document.getElementById("searchInput");
-const searchIcon = document.getElementById("searchIcon");
-const clearIcon = document.getElementById("clearIcon");
-
 const modal = document.getElementById("recipeModal");
 const closeModal = document.querySelector(".close-button");
 const modalTitle = document.getElementById("modalTitle");
@@ -44,30 +40,6 @@ function displayRecipes(recipesToShow) {
   });
 }
 
-searchIcon.addEventListener("click", () => {
-  const query = searchInput.value.toLowerCase();
-  const filtered = recipes.filter(r => r.name.toLowerCase().includes(query));
-  displayRecipes(filtered);
-});
-
-clearIcon.addEventListener("click", () => {
-  searchInput.value = "";
-  clearIcon.style.display = "none";
-  displayRecipes(recipes.slice(0, visibleCount));
-});
-
-searchInput.addEventListener("input", () => {
-  const query = searchInput.value.toLowerCase();
-  const filtered = recipes.filter(r => r.name.toLowerCase().includes(query));
-  displayRecipes(filtered);
-  clearIcon.style.display = query ? "block" : "none";
-});
-searchInput.addEventListener("keydown", e => {
-  if (e.key === "Enter") {
-    searchIcon.click(); // simulate clicking the icon
-  }
-});
-
 function showRecipeModal(recipe) {
   modalTitle.textContent = recipe.name;
   modalImage.src = recipe.image;
@@ -97,6 +69,13 @@ window.addEventListener("click", e => {
   if (e.target === modal) modal.style.display = "none";
 });
 
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+  const filtered = recipes.filter(r => r.name.toLowerCase().includes(query));
+  displayRecipes(filtered.slice(0, visibleCount));
+  showMoreBtn.style.display = filtered.length > visibleCount ? "block" : "none";
+});
+
 showMoreBtn.addEventListener("click", () => {
   visibleCount += 8;
   displayRecipes(recipes.slice(0, visibleCount));
@@ -106,42 +85,3 @@ showMoreBtn.addEventListener("click", () => {
 });
 
 fetchRecipes();
-
-// ✅ DOWNLOAD RECIPE AS PRINTABLE PDF
-document.addEventListener("DOMContentLoaded", () => {
-  const downloadBtn = document.getElementById("downloadBtn");
-
-  downloadBtn.addEventListener("click", () => {
-    const title = modalTitle.textContent.trim();
-    const imageSrc = modalImage.src;
-    const ingredients = Array.from(modalIngredients.querySelectorAll("li")).map(li => li.textContent);
-    const instructions = Array.from(modalInstructions.querySelectorAll("li")).map(li => li.textContent);
-
-    const newWindow = window.open("", "", "width=800,height=600");
-    newWindow.document.write(`
-      <html>
-      <head>
-        <title>${title}</title>
-        <style>
-          body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
-          h1 { color: #4a148c; }
-          img { width: 100%; max-width: 500px; border-radius: 10px; margin-bottom: 20px; }
-          h2 { margin-top: 20px; color: #333; }
-          ul, ol { padding-left: 20px; }
-        </style>
-      </head>
-      <body>
-        <h1>${title}</h1>
-        <img src="${imageSrc}" alt="${title}" />
-        <h2>Ingredients</h2>
-        <ul>${ingredients.map(item => `<li>${item}</li>`).join("")}</ul>
-        <h2>Instructions</h2>
-        <ol>${instructions.map(step => `<li>${step}</li>`).join("")}</ol>
-      </body>
-      </html>
-    `);
-    newWindow.document.close();
-    newWindow.focus();
-    newWindow.print(); // lets user download/save as PDF
-  });
-});
