@@ -107,7 +107,6 @@ showMoreBtn.addEventListener("click", () => {
 
 fetchRecipes();
 
-// ✅ DOWNLOAD RECIPE AS PRINTABLE PDF
 document.addEventListener("DOMContentLoaded", () => {
   const downloadBtn = document.getElementById("downloadBtn");
 
