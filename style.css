@@ -1,3 +1,4 @@
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +41,7 @@ body {
 }
 
 .nav-logo {
-  width: 60px; /* adjust size here */
+  width: 60px;
   height: auto;
 }
 
@@ -130,11 +131,11 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .card {
-    background: linear-gradient(to right,#c17d67, #ffecd2);
+  background: linear-gradient(to right,#c17d67, #ffecd2);
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
   overflow: hidden;
@@ -145,7 +146,6 @@ body {
 
 .card:hover {
   transform: scale(1.02);
-  
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -241,6 +241,48 @@ footer {
   border-radius: 12px;
 }
 
+/* Social Media Icons */
+/* Modern Animated Social Media Icons */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: #41384b;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+.social-icons a:hover {
+  color: #191818; /* Bright hover color */
+  transform: translateY(-5px) scale(1.3); /* Bounce + grow */
+}
+
+/* Optional: add a subtle pulse animation */
+.social-icons a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 111, 97, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  z-index: -1;
+}
+
+.social-icons a:hover::after {
+  width: 100%;
+  
+}
+
+
 /* Show More Button */
 .show-more-container {
   display: flex;
@@ -285,6 +327,7 @@ footer {
   background-color: #302a35;
   transform: scale(1.05);
 }
+
 /* View Toggle */
 .view-toggle {
   display: flex;
@@ -312,6 +355,10 @@ footer {
   background-color: #211d24;
 }
 
+.view-toggle button i {
+  margin-right: 6px;
+}
+
 /* List View */
 .list-view {
   display: flex !important;
@@ -335,4 +382,3 @@ footer {
 .list-view .card h3 {
   padding: 0;
 }
-
