@@ -116,13 +116,13 @@ body {
 
 .search-icon {
   right: 20px;
-  pointer-events: none;
+  pointer-events: auto;
   cursor: pointer;
 }
 
 .clear-icon {
   right: 45px;
-  
+  display: none;
 }
 
 /* Recipe Grid */
