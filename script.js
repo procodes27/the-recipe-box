@@ -13,6 +13,7 @@ const modalIngredients = document.getElementById("modalIngredients");
 const modalInstructions = document.getElementById("modalInstructions");
 const showMoreBtn = document.getElementById("showMoreBtn");
 
+// Fetch Recipes
 async function fetchRecipes() {
   try {
     const response = await fetch("recipes.json");
@@ -20,9 +21,7 @@ async function fetchRecipes() {
     const data = await response.json();
     recipes = data;
     displayRecipes(recipes.slice(0, visibleCount));
-    if (visibleCount < recipes.length) {
-      showMoreBtn.style.display = "block";
-    }
+    if (visibleCount < recipes.length) showMoreBtn.style.display = "block";
   } catch (error) {
     recipeGrid.innerHTML = '<p style="color:red;">Failed to load recipes.</p>';
     console.error(error);
@@ -43,24 +42,22 @@ function displayRecipes(recipesToShow) {
   });
 }
 
+// Search
 searchIcon.addEventListener("click", () => {
   const query = searchInput.value.toLowerCase();
   const filtered = recipes.filter(r => r.name.toLowerCase().includes(query));
   displayRecipes(filtered);
 });
-
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase();
   const filtered = recipes.filter(r => r.name.toLowerCase().includes(query));
   displayRecipes(filtered);
 });
-
 searchInput.addEventListener("keydown", e => {
-  if (e.key === "Enter") {
-    searchIcon.click();
-  }
+  if (e.key === "Enter") searchIcon.click();
 });
 
+// Modal
 function showRecipeModal(recipe) {
   modalTitle.textContent = recipe.name;
   modalImage.src = recipe.image;
@@ -90,16 +87,14 @@ window.addEventListener("click", e => {
   if (e.target === modal) modal.style.display = "none";
 });
 
+// Show More
 showMoreBtn.addEventListener("click", () => {
   visibleCount += 8;
   displayRecipes(recipes.slice(0, visibleCount));
-  if (visibleCount >= recipes.length) {
-    showMoreBtn.style.display = "none";
-  }
+  if (visibleCount >= recipes.length) showMoreBtn.style.display = "none";
 });
 
-fetchRecipes();
-
+// Download Recipe
 document.addEventListener("DOMContentLoaded", () => {
   const downloadBtn = document.getElementById("downloadBtn");
 
@@ -137,7 +132,8 @@ document.addEventListener("DOMContentLoaded", () => {
     newWindow.print();
   });
 });
-// Grid/List View Toggle
+
+// Grid/List Toggle
 const gridViewBtn = document.getElementById("gridViewBtn");
 const listViewBtn = document.getElementById("listViewBtn");
 const recipeGridEl = document.getElementById("recipeGrid");
@@ -153,3 +149,6 @@ listViewBtn.addEventListener("click", () => {
   listViewBtn.classList.add("active");
   gridViewBtn.classList.remove("active");
 });
+
+// Initial Fetch
+fetchRecipes();
