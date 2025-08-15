@@ -4,7 +4,6 @@ let visibleCount = 8;
 const recipeGrid = document.getElementById("recipeGrid");
 const searchInput = document.getElementById("searchInput");
 const searchIcon = document.getElementById("searchIcon");
-const clearIcon = document.getElementById("clearIcon");
 
 const modal = document.getElementById("recipeModal");
 const closeModal = document.querySelector(".close-button");
@@ -50,21 +49,15 @@ searchIcon.addEventListener("click", () => {
   displayRecipes(filtered);
 });
 
-clearIcon.addEventListener("click", () => {
-  searchInput.value = "";
-  clearIcon.style.display = "none";
-  displayRecipes(recipes.slice(0, visibleCount));
-});
-
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase();
   const filtered = recipes.filter(r => r.name.toLowerCase().includes(query));
   displayRecipes(filtered);
-  clearIcon.style.display = query ? "block" : "none";
 });
+
 searchInput.addEventListener("keydown", e => {
   if (e.key === "Enter") {
-    searchIcon.click(); // simulate clicking the icon
+    searchIcon.click();
   }
 });
 
@@ -141,6 +134,22 @@ document.addEventListener("DOMContentLoaded", () => {
     `);
     newWindow.document.close();
     newWindow.focus();
-    newWindow.print(); // lets user download/save as PDF
+    newWindow.print();
   });
+});
+// Grid/List View Toggle
+const gridViewBtn = document.getElementById("gridViewBtn");
+const listViewBtn = document.getElementById("listViewBtn");
+const recipeGridEl = document.getElementById("recipeGrid");
+
+gridViewBtn.addEventListener("click", () => {
+  recipeGridEl.classList.remove("list-view");
+  gridViewBtn.classList.add("active");
+  listViewBtn.classList.remove("active");
+});
+
+listViewBtn.addEventListener("click", () => {
+  recipeGridEl.classList.add("list-view");
+  listViewBtn.classList.add("active");
+  gridViewBtn.classList.remove("active");
 });
