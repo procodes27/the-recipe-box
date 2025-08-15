@@ -31,9 +31,17 @@ body {
 }
 
 .navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.8rem;
   font-weight: bold;
   color: #333333;
+}
+
+.nav-logo {
+  width: 60px; /* adjust size here */
+  height: auto;
 }
 
 .nav-links {
@@ -55,74 +63,66 @@ body {
 
 /* Hero Section */
 .hero {
-  text-align: center;
   background: linear-gradient(to right, #ffecd2, #c17d67);
   color: #692828;
-  padding: 60px 20px;
+  padding: 40px;
   border-radius: 16px;
   max-width: 1100px;
   margin: 40px auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-logo {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+.hero-text {
+  flex: 1;
+}
+
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 1px;
+  margin-bottom: 10px;
   font-weight: 700;
 }
 
 .hero p {
   font-size: 1rem;
-  margin-bottom: 9px;
-}
-.hero:hover{
- 
-  transform: scale(1.004);
-  transition: 0.5s;
-  
-  
-  
+  margin-bottom: 15px;
 }
 
-/* Search Container */
+/* Search Bar */
 .search-container {
   position: relative;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 400px;
 }
 
 .search-container input {
   width: 100%;
-  padding: 12px 80px 12px 20px;
+  padding: 12px 50px 12px 20px;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 2px solid rgb(120, 58, 58);
   border-radius: 30px;
   outline: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.search-icon,
-.clear-icon {
+.search-icon {
   position: absolute;
   top: 50%;
+  right: 20px;
   transform: translateY(-50%);
   color: #888;
   font-size: 1.1rem;
   cursor: pointer;
-  
-  
-}
-
-.search-icon {
-  right: 20px;
-  pointer-events: none;
-  cursor: pointer;
-}
-
-.clear-icon {
-  right: 45px;
-  
 }
 
 /* Recipe Grid */
@@ -134,8 +134,9 @@ body {
 }
 
 .card {
-  background: rgb(248, 204, 204);
-  border-radius: 15px;
+    background: linear-gradient(to right,#c17d67, #ffecd2);
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
@@ -144,6 +145,8 @@ body {
 
 .card:hover {
   transform: scale(1.02);
+  
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .card img {
@@ -158,21 +161,22 @@ body {
   color: #333;
 }
 
-/* Modal Styles */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
   background: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
   z-index: 999;
-  
 }
 
 .modal-content {
-    background: linear-gradient(to right,#dcb989, #c1a57c);
+  background: linear-gradient(to right, #dcb989, #c1a57c);
   padding: 30px;
   max-width: 600px;
   width: 90%;
@@ -189,12 +193,14 @@ body {
   right: 20px;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #888;
+  color: #0f0d0d;
 }
 
 .modal-content img {
-  width: 100%;
-  border-radius: 12px;
+  height: 50%;
+  width: 50%;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
   margin-bottom: 1rem;
 }
 
@@ -260,22 +266,7 @@ footer {
   transform: scale(1.05);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #searchInput {
-    width: 90%;
-  }
-}
-
+/* Download Button */
 #downloadBtn {
   display: block;
   margin: 20px auto 0;
@@ -286,7 +277,7 @@ footer {
   font-size: 1rem;
   border-radius: 30px;
   cursor: pointer;
-   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   transition: background 0.3s, transform 0.2s;
 }
 
@@ -294,7 +285,54 @@ footer {
   background-color: #302a35;
   transform: scale(1.05);
 }
+/* View Toggle */
+.view-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
+.view-toggle button {
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #3e3f33;
+  color: white;
+  transition: background 0.3s, transform 0.2s;
+}
 
+.view-toggle button:hover {
+  background-color: #544b5b;
+  transform: scale(1.05);
+}
 
+.view-toggle button.active {
+  background-color: #211d24;
+}
+
+/* List View */
+.list-view {
+  display: flex !important;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list-view .card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.list-view .card img {
+  width: 450px;
+  height: 150px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.list-view .card h3 {
+  padding: 0;
+}
 
